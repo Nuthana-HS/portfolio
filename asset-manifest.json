@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.ed93875a.css",
+    "main.js": "/portfolio/static/js/main.cf94bf32.js",
+    "static/media/nuthana_photo.jpeg": "/portfolio/static/media/nuthana_photo.952aa8b5c99c855fc5b7.jpeg",
+    "index.html": "/portfolio/index.html",
+    "main.ed93875a.css.map": "/portfolio/static/css/main.ed93875a.css.map",
+    "main.cf94bf32.js.map": "/portfolio/static/js/main.cf94bf32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed93875a.css",
+    "static/js/main.cf94bf32.js"
+  ]
+}
