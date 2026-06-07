@@ -1,0 +1,146 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(88, 166, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero__glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero__greeting {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.hero__name {
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.hero__role {
+  font-size: clamp(20px, 3.5vw, 32px);
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero__role-text {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero__cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+}
+
+.hero__desc {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+
+.hero__highlight {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.hero__socials {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero__social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.hero__social-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__scroll-hint span {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: fadeIn 1s ease 1s both;
+}
+
+@media (max-width: 768px) {
+  .hero__scroll-hint { display: none; }
+  .hero__name { letter-spacing: -0.5px; }
+}
